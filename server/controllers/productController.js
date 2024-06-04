@@ -32,3 +32,35 @@ export const createProduct = async (req, res) => {
     });
   }
 };
+
+export const remove = async (req, res) => {
+  try {
+    const productId = req.params.id;
+    productModel
+      .findOne({ _id: productId })
+      .then((doc) => {
+        if (!doc) {
+          return res.status(404).json({
+            message: "Продукт не знайдено",
+          });
+        }
+        return doc.deleteOne();
+      })
+      .then(() => {
+        res.json({
+          success: true,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        return res.status(500).json({
+          message: "Не вдалось видалити продукт",
+        });
+      });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      message: "Помилка під час видалення продукту",
+    });
+  }
+};

@@ -24,6 +24,8 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/product/create", ProductController.createProduct);
+app.get("/", ProductController.getAll);
+app.delete("/:id", ProductController.remove);
 
 app.listen(4444, (err) => {
   if (err) {
