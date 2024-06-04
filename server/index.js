@@ -26,7 +26,11 @@ app.use(cors());
 app.post("/product/create", ProductController.createProduct);
 app.get("/", ProductController.getAll);
 app.delete("/:id", ProductController.remove);
-
+app.put(
+  "/product/:id",
+  ProductController.remove,
+  ProductController.createProduct
+);
 app.listen(4444, (err) => {
   if (err) {
     return console.log(err);

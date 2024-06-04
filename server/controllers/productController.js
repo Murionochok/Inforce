@@ -33,7 +33,7 @@ export const createProduct = async (req, res) => {
   }
 };
 
-export const remove = async (req, res) => {
+export const remove = async (req, res, next) => {
   try {
     const productId = req.params.id;
     productModel
@@ -50,6 +50,7 @@ export const remove = async (req, res) => {
         res.json({
           success: true,
         });
+        next();
       })
       .catch((err) => {
         console.log(err);
