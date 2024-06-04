@@ -13,3 +13,8 @@ interface Size {
   width: number;
   height: number;
 }
+
+export interface ModalData {
+  product?: productData;
+  handleClose: Function;
+}

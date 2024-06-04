@@ -5,12 +5,9 @@ import { ProductController } from "./controllers/index.js";
 
 const app = express();
 
-const user = "ivanfedoniukkn2021";
-const password = "1w2q3r4e3";
-
 mongoose
   .connect(
-    `mongodb+srv://${user}:${password}@cluster0.uuqtosr.mongodb.net/inforce?retryWrites=true&w=majority`
+    `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.uuqtosr.mongodb.net/inforce?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("DB Ok");
