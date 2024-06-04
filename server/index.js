@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import { ProductController } from "./controllers/index.js";
 
 const app = express();
 
@@ -22,10 +23,7 @@ app.use("/img", express.static("img"));
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.status = 200;
-  res.end("Hello");
-});
+app.post("/product/create", ProductController.createProduct);
 
 app.listen(4444, (err) => {
   if (err) {
