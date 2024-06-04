@@ -16,13 +16,15 @@ const ProductSchema = mongoose.Schema({
   size: {
     type: Object,
     required: true,
-    width: { type: Number, required: true },
-    height: { type: Number, required: true },
   },
   comments: {
     type: Array,
     required: true,
     default: [],
+  },
+  weight: {
+    type: String,
+    required: true,
   },
 });
 

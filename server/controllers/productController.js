@@ -19,7 +19,8 @@ export const createProduct = async (req, res) => {
       name: req.body.name,
       address: req.body.address,
       count: req.body.count,
-      size: { width: req.body.width, height: req.body.height },
+      size: req.body.size,
+      weight: req.body.weight,
     });
 
     const post = await doc.save();

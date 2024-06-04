@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5cfcf;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: end;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
