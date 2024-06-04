@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server part of Inforce test task",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murionochok/Inforce.git"
+  },
+  "author": "Ivan Fedoniuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Murionochok/Inforce/issues"
+  },
+  "homepage": "https://github.com/Murionochok/Inforce#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
